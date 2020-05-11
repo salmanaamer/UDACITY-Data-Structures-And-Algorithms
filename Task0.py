@@ -6,17 +6,20 @@ import csv
 with open('texts.csv', 'r') as f:
     reader = csv.reader(f)
     texts = list(reader)
-    for row in reader:
-        print (row + "\n")
+    print ("First record of texts," + " " + texts[0][0] + " " + "texts" + " " + texts[0][1] + " " + "at time" + " " + texts[0][2])
 
+# this will not work as after the reader is run, the pointer reaches end of file
+# at this point, for x in f is pointing to end of file
+
+
+       
 with open('calls.csv', 'r') as f: 
     reader = csv.reader(f)
     calls = list(reader)
-print ("test")
-# why same name f, because with closes file ?
+    print ("Last record of calls," + " " + calls[-1][0] + " " + "calls" + " " + calls[-1][1] + " " + "at time" + " " + calls[-1][2] + ", "  + "lasting " + calls[-1][3] + " seconds")
 
-    
-    
+
+
 """
 TASK 0:
 What is the first record of texts and what is the last record of calls?

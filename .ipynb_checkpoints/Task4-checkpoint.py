@@ -11,21 +11,6 @@ with open('texts.csv', 'r') as f:
 with open('calls.csv', 'r') as f:
     reader = csv.reader(f)
     calls = list(reader)
-    mylist1 = []
-    mylist2 = []
-    for row in calls:
-        mylist1.append(row[0])
-        mylist2.append(row[1])
-    # remove duplicates in list of outgoing and incoming calls and obtain 2 different lists
-    mydict_outgoing = dict.fromkeys(mylist1,0)
-    mydict_incoming = dict.fromkeys(mylist2,0)
-    mylist_outgoing = list(mydict_outgoing)
-    mylist_incoming = list(mydict_incoming)
-    # check if number made call but did not receive a call and if so, delete it from outgoing call list
-    for outcall in mylist_outgoing:
-        if outcall in mylist_incoming:
-            mylist_outgoing.remove(outcall)
-    print (mylist_outgoing)
 
 """
 TASK 4:
