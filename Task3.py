@@ -12,6 +12,8 @@ with open('calls.csv', 'r') as f:
     reader = csv.reader(f)
     calls = list(reader)
 
+# "abc".startswith
+
 """
 TASK 3:
 (080) is the area code for fixed line telephones in Bangalore.

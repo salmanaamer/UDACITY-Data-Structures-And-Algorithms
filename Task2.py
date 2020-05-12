@@ -22,19 +22,18 @@ def maxvalue (dict):
 with open('calls.csv', 'r') as f:
     reader = csv.reader(f)
     calls = list(reader)
-    mylist = []
-    for row in calls:
-        mylist.append(row[0])
-        mylist.append(row[1])
-    mydict = dict.fromkeys(mylist,0)
-    for row in calls:
-        if row [0] in mydict:
-            mydict[row[0]] = int(mydict[row[0]]) + int(row[3])
-        if row [1] in mydict:
-            mydict[row[1]] = int(mydict[row[1]]) + int(row[3])
-    maxvalue(mydict)
+mylist = []
+for row in calls:
+    mylist.append(row[0])
+    mylist.append(row[1])
+mydict = dict.fromkeys(mylist,0)
+for row in calls:
+    mydict[row[0]] = int(mydict[row[0]]) + int(row[3]) 
+    mydict[row[1]] = int(mydict[row[1]]) + int(row[3])
+maxvalue(mydict)
     
 
+#sorted function, 
 """
 TASK 2: Which telephone number spent the longest time on the phone
 during the period? Don't forget that time spent answering a call is

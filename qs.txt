@@ -2,9 +2,9 @@ with open('texts.csv', 'r') as f:
     reader = csv.reader(f)
     for x in f:
         print (x)
-why does this work ?
+why does this work ? resolved
 
-    How does the rows become lists, like where did we define them as lists ?
+    How does the rows become lists, like where did we define them as lists ? resolved
 
 https://docs.python.org/3/library/csv.html
 
@@ -13,26 +13,29 @@ https://docs.python.org/3/library/csv.html
     for row in calls:
         print (row[0])   
 
-    How does the rows become lists, like where did we define them as lists ?
+    How does the rows become lists, like where did we define them as lists ? resolved
 
 
     with open('calls.csv', 'r') as f:
-    reader = csv.reader(f)
-    calls = list(reader)
-    mylist = []
-    i = 0 
-    for row in calls:
-        mylist[i] = row[0]
-        i += 1
-        mylist[i] = row[1]
-        i += 1
+        reader = csv.reader(f)
+        calls = list(reader)
+        mylist = []
+        i = 0 
+        for row in calls:
+            mylist[i] = row[0]
+            i += 1
+            mylist[i] = row[1]
+            i += 1
+
+
+    you can only index the values that are already in the list, otherwise use append
 
     print (mylist)
     print ("test")
 
+resolved
 
-
-when i print the elements of list, I cant see first element printed
+when i print the elements of list, I cant see first element printed --> memory limit, resolved
 
 in list are the items stored with index value, one after the other, I beleieve so 
 
