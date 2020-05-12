@@ -27,6 +27,13 @@ with open('calls.csv', 'r') as f:
             mylist_outgoing.remove(outcall)
     print (mylist_outgoing)
 
+# check if the number ever made a text    
+def check_text (call_list)
+
+
+
+
+
 """
 TASK 4:
 The telephone company want to identify numbers that might be doing
